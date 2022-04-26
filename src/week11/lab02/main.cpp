@@ -15,7 +15,22 @@ int isPrime(int v)
 
 int main()
 {
-    // add your code here
+    int n;
+    int col=10;
+    cin >> n;
+    for (int i=2;i<=n;i++)
+    {
+        if(isPrime(i))
+        { 
+            cout <<  setw(2) << i;
+            col--;
+            if(col==0)
+            {
+                cout << endl;
+                col=10;
+            }
+        }
+    }
     
     return 0;
 }
